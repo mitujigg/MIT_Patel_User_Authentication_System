@@ -1,0 +1,12 @@
+CREATE TABLE users (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(100),
+ email VARCHAR(100) UNIQUE,
+ password VARCHAR(255),
+ role VARCHAR(20) DEFAULT 'user',
+ verified BOOLEAN DEFAULT FALSE,
+ verification_token VARCHAR(255),
+ reset_token VARCHAR(255),
+ refresh_token VARCHAR(255),
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
